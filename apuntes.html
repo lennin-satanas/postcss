@@ -165,3 +165,33 @@ Ahora que sabes que es una buena idea escribir código que en un futuro será el
 Variables
 
 
+/*utilizando variables*/
+
+:root {
+  --color: red;
+  --ligthcolor: white;
+  --darkcolor: #15192a;
+  --warningColor: red;
+
+
+}
+
+.btn{
+  /*llamndo al boton con @apply*/
+  border: 1px solid var(--ligthcolor);
+  border-radius: 5px;
+  background: var(--darkcolor);
+  color: var(--ligthcolor);
+  padding: .5em 2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 5px solid var(--ligthcolor);
+  font-size: 14px;
+}
+
+btn.warning{
+  background: var(--warningColor);
+}
+
+//apagando para que lea de forma nativa, para que no sean transpiladas
+        customProperties: false,
