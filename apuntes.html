@@ -70,3 +70,30 @@ se puede prender y apagar en  un area especifica
 
 /*autoprefixer: off*/
 
+
+4. Instalando CSSNEXT un plugin que incluye muchos plugins
+npm install postcss-cssnext --save
+
+lo agregamos al archivo postcss.config.js 
+
+module.exports = {
+  plugins:[
+    // require('autoprefixer')({
+    //   grid:true
+    // }),
+    require('postcss-cssnext')({
+      features:{
+        autoprefixer:{
+          grid:true
+        }
+      }
+    })
+  ]
+
+}
+
+comentamos la parte superior del plugin autoprefixer ya que css-next lo contiene
+
+
+
+

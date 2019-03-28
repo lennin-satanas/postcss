@@ -9,9 +9,9 @@ body {
   display: grid;
   height: 100vh;
   -ms-grid-columns: 350px 1fr;
-  grid-template-columns: 350px 1fr;
+      grid-template-columns: 350px 1fr;
   -ms-grid-rows: 1fr 150px;
-  grid-template-rows: 1fr 150px;
+      grid-template-rows: 1fr 150px;
       grid-template-areas: "sidebar primary"
                        "sidebar featuring";
   /* &-sidebar {
@@ -41,13 +41,14 @@ body {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
   -ms-grid-rows: auto 1fr 1fr;
-  grid-template-rows: auto 1fr 1fr;
+      grid-template-rows: auto 1fr 1fr;
   background: #15192a;
   color: white;
   padding: 1em;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 100vh;
   overflow: auto;
 }
@@ -132,9 +133,9 @@ body {
       grid-template-areas: "search user"
                        "list list";
   -ms-grid-rows: auto 1fr;
-  grid-template-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
   -ms-grid-columns: 300px 1fr;
-  grid-template-columns: 300px 1fr;
+      grid-template-columns: 300px 1fr;
   padding: 10px;
   overflow: auto;
 }
@@ -154,8 +155,10 @@ body {
   font-size: 16px;
   width: 100%;
   border: none;
-  box-shadow: 0 0 10px #f0f0f0;
-  box-sizing: border-box;;
+  -webkit-box-shadow: 0 0 10px #f0f0f0;
+          box-shadow: 0 0 10px #f0f0f0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;;
 }
 
 .primary-user {
@@ -228,6 +231,7 @@ body {
 
 
 .featuring {
+  background: -webkit-gradient(linear, left top, right top, from(#ff0000), to(#ff458b));
   background: linear-gradient(to right, #ff0000, #ff458b);
   display: flex;
   height: 100%;
@@ -249,7 +253,7 @@ body {
 }
 
 
-@media screen and (width <= 768px) {
+@media screen and (max-width: 768px) {
   body {
     border: 1px solid red;
   }
