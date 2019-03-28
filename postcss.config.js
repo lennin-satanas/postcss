@@ -12,6 +12,7 @@ module.exports = {
         },
         //apagando para que lea de forma nativa
         customProperties: false,
+        calc:false,
       }
     })
   ]
