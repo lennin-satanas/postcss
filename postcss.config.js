@@ -8,7 +8,8 @@ module.exports = {
         autoprefixer:{
           grid:true,
           flexbox:false,
-        }
+        },
+        customProperties: false,
       }
     })
   ]

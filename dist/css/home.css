@@ -3,8 +3,38 @@ body {
   margin: 0;
   font-family: 'Lato', sans-serif;
 }
+
+/*utilizando variables*/
+
+:root {
+  --color: red;
+  --ligthcolor: white;
+  --darkcolor: #15192a;
+  --warningColor: red;
+
+
+}
+
+.btn{
+  /*llamndo al boton con @apply*/
+  border: 1px solid var(--ligthcolor);
+  border-radius: 5px;
+  background: var(--darkcolor);
+  color: var(--ligthcolor);
+  padding: .5em 2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 5px solid var(--ligthcolor);
+  font-size: 14px;
+}
+
+btn.warning{
+  background: var(--warningColor);
+}
+
 /*home layout*/
 .home {
+  background: var(--ligthcolor);
   display: -ms-grid;
   display: grid;
   height: 100vh;
@@ -44,7 +74,7 @@ body {
       grid-template-columns: 1fr;
   -ms-grid-rows: auto 1fr 1fr;
       grid-template-rows: auto 1fr 1fr;
-  background: #15192a;
+  background: var(--darkcolor);
   color: white;
   padding: 1em;
   -webkit-box-sizing: border-box;

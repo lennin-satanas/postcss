@@ -96,4 +96,72 @@ comentamos la parte superior del plugin autoprefixer ya que css-next lo contiene
 
 
 
+Los nuevos módulos de CSS
+
+Vamos a entrar a mi parte favorita de este curso y la razón más importante para incluir PostCSS + CSSNext a tu Stack.
+
+CSS ya no es un conjunto de propiedades para crear nuestros estilos, ya no es más un paquete que recibe un único nombre y se optó por algo mucho mejor para que estas nuevas características sean adoptadas por los navegadores más rápidamente, a estos los llamamos módulos.
+
+Una ventaja de los módulos es que no necesariamente tienen que estar completos para ser implementados en el browser, pueden ir por niveles de la especificación y así garantizar constantes mejoras y nuevas características.
+
+Te haré un resumen de los módulos a tratar en este curso y que gracias a CSSNext podemos hacerlo compatibles hoy mismo.
+
+CSS Custom Properties for Cascading Variables Module Level 1
+Esta es una característica que nos permitirá traer a CSS algo que extraños mucho de los lenguaje de programación, las variables. Así podemos guardar por ejemplo el color hexadecimal preciso que necesitamos y darle un nombre que recordemos como –elVerdePerfecto.
+https://www.w3.org/TR/css-variables
+
+
+Media Queries Level 4
+Los media queries son nuestros mejores amigos para cambiar el CSS de algunos elementos dependiendo de las condiciones del navegador, es decir, en Responsive Design. Ahora podremos nombrar un media query como si fuera una variable para ser más fácil de reutilizar y rangos de media queries para una mejor sintaxis.
+https://drafts.csswg.org/mediaqueries/
+
+CSS Images Module Level 3
+Con image-set() vamos a poder elegir una determinada image de background dependiendo de la densidad de pixel que tenga el monitor
+https://drafts.csswg.org/css-images-3/#image-set-notation
+
+CSS Color Module Level 4
+Ya conocemos los hexadecimales, rgb() rgba() y ahora con la función color() vamos a poder seguir creando variaciones a la forma de asignar colores.
+https://drafts.csswg.org/css-color/#modifying-colors
+
+CSS Fonts Module Level 4
+La forma de agregar tipografias también viene con mejoras y mi favorita se llama “System UI”. Con System UI podemos asignar un fallback que tomará la fuente predefinida de tu sistema operativo, en el caso de mac "San Francisco"
+https://drafts.csswg.org/css-fonts-4/#valdef-font-family-system-ui
+
+CSS Extensions - Custom Selectors
+CSS quiere permitirte agrupar un selector o conjunto de selectores en algo más fácil de recordar como es el caso de las variables, estas se podrán anidar
+
+Selectors Level 4
+Aprenderemos a usar psedu clases como :any-link() :not() :matches()
+https://drafts.csswg.org/selectors-4/#matches
+
+Nesting
+Este es mi favorito, es una propuesta que nos permitirá usar mi cualidad favorita de los preprocesadores, evitar repetir un selector previamente escrito, es dificil de explicar así que dejaré un pequeño ejemplo
+
+CSS actual
+
+.mi .selector .css {
+	color: orange;
+}
+CSS Nesting
+
+.mi  {
+	color: red;
+	& .selector {
+		color: blue;
+		& .css {
+			color: orange;
+		}
+	}
+}
+
+Mientras que con nuestros selectores tradicionales tenemos que escribir en profundidad tanto como sea necesario con nesting (indentado en español) vamos a poder escribir los selectores una sola vez e ir agregándoles estilos independientemente
+
+http://tabatkins.github.io/specs/css-nesting/
+
+El conjunto de todo esto nos da un mejor CSS, uno que día a día se irá agregando en los navegadores y hará que no sea necesario hacerlo compatible con cssnext, cuando ese día llegue solo tienes que desactivarlo y como verás en las próximas clases podrás hacerlo independientemente por cada característica.
+
+Ahora que sabes que es una buena idea escribir código que en un futuro será el estándar continúa con el curso que espero te deje impresionado clase a clase.
+
+Variables
+
 
