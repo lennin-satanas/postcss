@@ -1,0 +1,22 @@
+{
+  "name": "postcss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lennin-satanas/postcss.git"
+  },
+  "author": "Lennin Ibarra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lennin-satanas/postcss/issues"
+  },
+  "homepage": "https://github.com/lennin-satanas/postcss#readme",
+  "dependencies": {
+    "postcss-cli": "^6.1.2"
+  }
+}
