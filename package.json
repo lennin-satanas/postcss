@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/lennin-satanas/postcss#readme",
   "dependencies": {
+    "autoprefixer": "^9.5.0",
     "postcss-cli": "^6.1.2"
   }
 }

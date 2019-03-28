@@ -38,8 +38,35 @@ npx postcss src/css/home.css -o dist/css/home.css -w
 Esto permite que si actulizamos el css de desarrollo se 
 actulice el de producción
 
+3. Uso de Plugins de PostCSS:
+npx postcss src/css/home.css -o dist/css/home.css -w -u
+[ -u | --use] uso de plugins de PostCSS
 
+para ver que plugins existen e instalarlo
+www.postcss.parts
 
+utilizando el plugin autoprefixer, coloca los prefijos para que funcione correctamente en los diferentes navegadores
 
+instalando autoprefixer
+npm install --save autoprefixer
 
+para correrlos de forma manual ejecutamos
+npx postcss src/css/home.css -o dist/css/home.css -w -u autoprefixer
+
+www.caniuse.com esta pagina sirve para ver las capacidades de los navegadores
+
+creamos un archivo con el nombre postcss.config.js en la raiz 
+
+module.exports = {
+  plugins:[
+    require('autoprefixer')({
+      grid:true
+    })
+  ]
+
+}
+
+se puede prender y apagar en  un area especifica
+
+/*autoprefixer: off*/
 
