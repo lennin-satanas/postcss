@@ -50,6 +50,7 @@ btn.warning{
   /* &-sidebar {
     grid-area: sidebar;
   } */
+  /* background: green; */
 }
 
 .home-sidebar {
@@ -73,15 +74,25 @@ btn.warning{
   box-sizing: border-box;
   height: 100vh;
   overflow: auto;
+  /*color*/
+  /* background: red; */
+  /* background: color(black alpha(50%) contrast(100%)); */
+  /* background: hwb(hue, whitness, blacness, opacidad); */
+  /* background: hwb(0 - 360, 0 - 100%, 0 - 100%) */
+  background: hwb(230, 8%, 82%, 1);
+  /* background: gray(0 - 255); */
+  /* background: gray(204); */
 }
 
 /*Logo*/
 .logo {
-  background: blue;
+  /* background: blue; */
   height: 40px;
   /* background-image: url('../../images/platzi-video.png'); */
   /* background-image: image-set(url de la imagen densidad, url de la imagen densidad); */
-  background-image: image-set(url(../../images/platzi-video.png) 1x, url(../../images/platzi-video-2x.png) 2x, url(../../images/platzi-video-3x.png) 300dpi);
+  background-image: image-set(url(../../images/platzi-video.png) 1x,
+                              url(../../images/platzi-video-2x.png) 2x,
+                              url(../../images/platzi-video-3x.png) 300dpi);
 
   background-position: center;
   background-size: contain;
