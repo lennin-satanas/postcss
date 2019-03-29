@@ -19,6 +19,7 @@
   "dependencies": {
     "autoprefixer": "^9.5.0",
     "postcss-cli": "^6.1.2",
-    "postcss-cssnext": "^3.1.0"
+    "postcss-cssnext": "^3.1.0",
+    "postcss-custom-media": "^7.0.7"
   }
 }

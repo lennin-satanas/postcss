@@ -202,3 +202,20 @@ Operaciones matematicas con CSS-CALC
 calc: (50vh * 2);
 
 calc: false con esto evitamos que la funcion se transpile ya que es soportada por todos lo navegadores
+
+
+Media Queries
+
+@custom-media: es la manera de personalizar o asignar un alias a los media query ejemplos:
+
+@custom-media --extra-small (width < 480px);
+@custom-media --small screen and (width < 768px);
+@custom-media --medium screen and (width >= 768px);
+@custom-media --large screen and (width >= 1024px);
+
+Al momento de usar el media query lo hariamos así:
+
+@media (--extra-small){
+  propiedades css
+}
+

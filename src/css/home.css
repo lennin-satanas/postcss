@@ -27,11 +27,11 @@ body {
 
 
 }
-
-.btn{
-  /*llamndo al boton con @apply*/
+/*llamndo al boton con @apply*/
+/* .btn{
+  
   @apply --button;
-}
+} */
 
 btn.warning{
   background: var(--warningColor);
@@ -260,9 +260,41 @@ btn.warning{
   margin: 10px;
 }
 
-
-@media screen and (width <= 768px) {
-  body {
-    border: 1px solid red;
+ /* @media screen and (max-width: 768px){
+  body{
+   
+    border: 10px solid blue;
   }
-}
+}  */
+
+
+
+/* @custom-media --small screen and (max-width: 768px); */
+@custom-media --extra-small screen and (width < 480px);
+@custom-media --small screen and (width < 768px);
+@custom-media --medium screen and (width >= 768px);
+@custom-media --large screen and (width >= 1024px);
+
+
+@media (--small){
+  body{
+    border: 10px solid blue;
+  }
+  .home{
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: "primary"
+                         "sidebar"
+                         "featuring";
+    
+  }
+  .featuring{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+  }
+} 
+

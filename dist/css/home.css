@@ -15,19 +15,11 @@ body {
 
 
 }
-
-.btn{
-  /*llamndo al boton con @apply*/
-  border: 1px solid var(--ligthcolor);
-  border-radius: 5px;
-  background: var(--darkcolor);
-  color: var(--ligthcolor);
-  padding: .5em 2em;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-bottom: 5px solid var(--ligthcolor);
-  font-size: 14px;
-}
+/*llamndo al boton con @apply*/
+/* .btn{
+  
+  @apply --button;
+} */
 
 btn.warning{
   background: var(--warningColor);
@@ -87,7 +79,7 @@ btn.warning{
 
 /*Logo*/
 .logo {
-  width: calc(100%-100px) ;
+  width: calc(100%-100px);
 }
 .logo-image {
   margin: 0;
@@ -284,9 +276,39 @@ btn.warning{
   margin: 10px;
 }
 
-
-@media screen and (max-width: 768px) {
-  body {
-    border: 1px solid red;
+ /* @media screen and (max-width: 768px){
+  body{
+   
+    border: 10px solid blue;
   }
-}
+}  */
+
+
+
+/* @custom-media --small screen and (max-width: 768px); */
+
+
+@media screen and (max-width: 767px){
+  body{
+    border: 10px solid blue;
+  }
+  .home{
+    height: auto;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto auto 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas: "primary"
+                         "sidebar"
+                         "featuring";
+    
+  }
+  .featuring{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+  }
+} 
+
