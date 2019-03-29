@@ -253,3 +253,38 @@ Fuentes
 
 Usar system-ui como plan B para utilizar la fuente por defecto del sistema operativo:
 font-family: 'Lato', system-ui
+
+Selectores personalizados
+
+/*selectores personalizados */
+/*creamos el selector*/
+/* ojo necesita el espacio*/
+/* @custom-selector :--nombreDelSelector .elemento > .hijo, elemento2 > .hijo; */
+@custom-selector :--chekeable .checkbox-label, .radio-label;
+@custom-selector :--higthligth :hover, :active;
+
+
+.checkbox:checked + .primaryPlaylist-list{
+  display: none;
+}
+
+:--chekeable{
+  cursor: pointer;
+  /*no permite copiar el texto*/
+  user-select: none;
+  padding: 3px 7px;
+  border: 1px solid color(red b(10%));
+  border-bottom: 3px solid red;
+  color: gray(100);
+  font-size: 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+:--chekeable:--higthligth{
+  background: red;
+  color: white;
+}
+
+tener en cuenta el html 
