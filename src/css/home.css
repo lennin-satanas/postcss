@@ -1,7 +1,7 @@
 body {
   
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', system-ui;
 }
 
 /*utilizando variables*/
@@ -28,12 +28,12 @@ body {
 
 }
 /*llamndo al boton con @apply*/
-/* .btn{
+.btn{
   
   @apply --button;
-} */
+}
 
-btn.warning{
+.btn.warning{
   background: var(--warningColor);
 }
 

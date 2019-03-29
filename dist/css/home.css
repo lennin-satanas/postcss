@@ -1,7 +1,7 @@
 body {
   
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue;
 }
 
 /*utilizando variables*/
@@ -16,12 +16,19 @@ body {
 
 }
 /*llamndo al boton con @apply*/
-/* .btn{
-  
-  @apply --button;
-} */
+.btn{
+  border: 1px solid var(--ligthcolor);
+  border-radius: 5px;
+  background: var(--darkcolor);
+  color: var(--ligthcolor);
+  padding: .5em 2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 5px solid var(--ligthcolor);
+  font-size: 14px;
+}
 
-btn.warning{
+.btn.warning{
   background: var(--warningColor);
 }
 
