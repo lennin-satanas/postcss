@@ -2,6 +2,10 @@ body {
   
   margin: 0;
   font-family: 'Lato', system-ui;
+  /* ubicando los media queries para que sean mas legibles */
+  @media (--small){
+    border: 10px solid blue;
+  }
 }
 
 /*utilizando variables*/
@@ -85,6 +89,17 @@ body {
     grid-area: sidebar;
   } */
   /* background: green; */
+
+  /* ubicando los media queries con el nesting */
+  /* ubicando los media queries para que sean mas legibles */
+  @media (--small){
+      height: auto;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto 1fr;
+      grid-template-areas: "primary"
+                           "sidebar"
+                           "featuring";
+    }
 }
 
 .home-sidebar {
@@ -156,7 +171,7 @@ body {
 
 }
 
-.myPlaylist-item a {
+/* .myPlaylist-item a {
   color: white;
   text-decoration: none;
   font-size: .8em;
@@ -170,7 +185,36 @@ body {
 
 .myPlaylist-item a:hover {
   text-decoration: underline;
+} */
+
+/* arreglando esta parte con indentado nesting */
+
+
+.myPlaylist-item{
+  & a {
+    color: white;
+    text-decoration: none;
+    font-size: .8em;
+    display: block;
+    margin-bottom: 7px;
+  }
+  &:hover{
+    text-decoration: underline;
+  }
+  &:last-child a{
+    margin-bottom: 0px;
+  }
+  @nest .myPlaylist & {
+    border: 2px dashed red;
+  }
 }
+
+
+/* nest de profundidad don @nesting */
+/* .myPlaylist .myPlaylist-item{
+  border: 1px dashed pink;
+} */
+
 
 /* Nos permite seleccionar las coicidencias dentro de un selectores */
 .myPlaylist-item:matches(:first-child, :nth-last-of-type(4), :last-child){
@@ -317,6 +361,14 @@ body {
   align-items: center;
   padding-left: 100px;
   color: white;
+  /* ubicando los media queries para que sean mas legibles */
+  @media (--small){
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+  }
 }
 
 .featuring-image {
@@ -347,7 +399,9 @@ body {
 @custom-media --large screen and (width >= 1024px);
 
 
-@media (--small){
+/* gracias al nesting puedo ubicar los media queries en un lugar mas legible */
+
+/* @media (--small){
   body{
     border: 10px solid blue;
   }
@@ -367,5 +421,5 @@ body {
     right: 0;
     height: 150px;
   }
-} 
+}  */
 
