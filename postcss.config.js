@@ -4,6 +4,7 @@ module.exports = {
     //   grid:true
     // }),
     //prender features
+    require('postcss-import'),
     require('postcss-cssnext')({
       features:{
         autoprefixer:{

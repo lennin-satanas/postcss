@@ -308,5 +308,88 @@ https://cssnext.github.io/features/#any-link-pseudo-class
 
 indentado(nesting)
 
+/* .myPlaylist-item a {
+  color: white;
+  text-decoration: none;
+  font-size: .8em;
+  display: block;
+  margin-bottom: 7px;
+}
+.myPlaylist-item:last-child a {
+  margin-bottom: 0;
+}
 
+
+.myPlaylist-item a:hover {
+  text-decoration: underline;
+} */
+
+/* arreglando esta parte con indentado nesting */
+
+
+.myPlaylist-item{
+  & a {
+    color: white;
+    text-decoration: none;
+    font-size: .8em;
+    display: block;
+    margin-bottom: 7px;
+  }
+  &:hover{
+    text-decoration: underline;
+  }
+  &:last-child a{
+    margin-bottom: 0px;
+  }
+  @nest .myPlaylist & {
+    border: 2px dashed red;
+  }
+}
+
+ademas los media queries para mayor legibilidad
+
+
+.featuring {
+  background: linear-gradient(to right, #ff0000, #ff458b);
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding-left: 100px;
+  color: white;
+  /* ubicando los media queries para que sean mas legibles */
+  @media (--small){
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+  }
+}
+
+Modulariza tu codigo con postcss-imports
+
+instalar plugin npm install postcss-imports
+ adicionar en postcss.config.js 
+
+ module.exports = {
+  plugins:[
+    // require('autoprefixer')({
+    //   grid:true
+    // }),
+    //prender features
+    require('postcss-import'),
+    require('postcss-cssnext')({
+      features:{
+        autoprefixer:{
+          grid:true,
+          flexbox:false,
+        },
+        //apagando para que lea de forma nativa
+        customProperties: false,
+        calc:false,
+      }
+    })
+  ]
+
+}
 

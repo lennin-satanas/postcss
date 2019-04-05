@@ -1,0 +1,9 @@
+body {
+  
+  margin: 0;
+  font-family: 'Lato', system-ui;
+  /* ubicando los media queries para que sean mas legibles */
+  @media (--small){
+    border: 10px solid blue;
+  }
+}

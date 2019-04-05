@@ -4,17 +4,47 @@ body {
   font-family: 'Lato', system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue;
   /* ubicando los media queries para que sean mas legibles */
 }
-
 @media screen and (max-width: 767px) {
-
   body {
   
     border: 10px solid blue;
   }
 }
-
+.featuring {
+  background: -webkit-gradient(linear, left top, right top, from(#ff0000), to(#ff458b));
+  background: linear-gradient(to right, #ff0000, #ff458b);
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding-left: 100px;
+  color: white;
+  /* ubicando los media queries para que sean mas legibles */
+}
+@media screen and (max-width: 767px) {
+  .featuring {
+  
+    position: fixed;
+  
+    bottom: 0;
+  
+    left: 0;
+  
+    right: 0;
+  
+    height: 150px;
+  }
+}
+.featuring-image {
+  margin-right: 20px;
+}
+.featuring-title {
+  margin: 10px;
+}
+.featuring-album {
+  font-size: 1.3em;
+  margin: 10px;
+}
 /*utilizando variables*/
-
 :root {
   --color: red;
   --ligthcolor: white;
@@ -36,21 +66,16 @@ body {
   border-bottom: 5px solid var(--ligthcolor);
   font-size: 14px;
 }
-
 .btn.warning{
   background: var(--warningColor);
 }
-
 /*selectores personalizados */
 /*creamos el selector*/
 /* ojo necesita el espacio*/
 /* @custom-selector :--nombreDelSelector .elemento > .hijo, elemento2 > .hijo; */
-
-
 .checkbox:checked + .primaryPlaylist-list{
   display: none;
 }
-
 .checkbox-label,
 .radio-label{
   cursor: pointer;
@@ -68,7 +93,6 @@ body {
   margin-bottom: 10px;
   display: inline-block;
 }
-
 .checkbox-label:hover,
 .radio-label:hover,
 .checkbox-label:active,
@@ -76,10 +100,6 @@ body {
   background: red;
   color: white;
 }
-
-
-
-
 /*home layout*/
 .home {
   background: var(--ligthcolor);
@@ -102,7 +122,6 @@ body {
   /* ubicando los media queries para que sean mas legibles */
 }
 @media screen and (max-width: 767px) {
-
   .home {
   
     height: auto;
@@ -120,7 +139,6 @@ body {
                            "featuring";
   }
 }
-
 .home-sidebar {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -137,7 +155,6 @@ body {
   -ms-grid-column: 2;
   grid-area: featuring;
 }
-
 /*Sidebar*/
 .sidebar {
   display: -ms-grid;
@@ -162,7 +179,6 @@ body {
   /* background: gray(0 - 255); */
   /* background: gray(204); */
 }
-
 /*Logo*/
 .logo {
   /* background: blue; */
@@ -181,17 +197,13 @@ body {
 .logo-image img {
   max-width: 100%;
 }
-
 .sidebarPlaylist {
   overflow: auto;
 }
-
 /*myPlaylist*/
-
 .myPlaylist {
   padding: 0 20px;
 }
-
 /*Permite seleccionar cualquier enlace dentro de un selector*/
 .myPlaylist :link:hover,.myPlaylist :visited:hover{
   color: (peru l(80%) s(80%));
@@ -199,7 +211,6 @@ body {
           transform: scale(.9);
 
 }
-
 /* .myPlaylist-item a {
   color: white;
   text-decoration: none;
@@ -215,10 +226,7 @@ body {
 .myPlaylist-item a:hover {
   text-decoration: underline;
 } */
-
 /* arreglando esta parte con indentado nesting */
-
-
 .myPlaylist-item a {
   
   color: white;
@@ -231,53 +239,37 @@ body {
   
   margin-bottom: 7px;
 }
-
-
 .myPlaylist-item:hover {
   
   text-decoration: underline;
 }
-
-
 .myPlaylist-item:last-child a {
   
   margin-bottom: 0px;
 }
-
-
 .myPlaylist .myPlaylist-item {
   
   border: 2px dashed red;
 }
-
-
 /* nest de profundidad don @nesting */
 /* .myPlaylist .myPlaylist-item{
   border: 1px dashed pink;
 } */
-
-
 /* Nos permite seleccionar las coicidencias dentro de un selectores */
 .myPlaylist-item:first-child, .myPlaylist-item:nth-last-of-type(4), .myPlaylist-item:last-child{
   background: rgb(255, 153, 153);
 }
-  
 /* Nos permite seleccionar lo que no coincida con las propiedades que se le pasen */
 .myPlaylist-item:not(:first-child):not(:nth-last-of-type(4)):not(:last-child){
   background: rgb(102, 102, 255);
 }
- 
-
 /*playlistFriends*/
-
 .playlistFriends {
   padding: 0;
 }
-
 .playlistFriends-item {
   color: white;
 }
-
 .playlistFriends-item {
   display: flex;
   margin-bottom: 7px;
@@ -292,19 +284,15 @@ body {
 .playlistFriends-item:hover a {
   text-decoration: underline;
 }
-
 .playlistFriends-item img {
   width: 35px;
   height: 35px;
   border-radius: 50%;
   margin-right: 10px;
 }
-
 .playlistFriends-item span {
   display: inline-block;
 }
-
-
 .home-primary {
   display: -ms-grid;
   display: grid;
@@ -317,14 +305,11 @@ body {
   padding: 10px;
   overflow: auto;
 }
-
-
 .search {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: search;
 }
-
 .search input {
   background: #f0f0f0;
   font-family: "Lato";
@@ -338,12 +323,10 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;;
 }
-
 .primary-user {
   -ms-grid-column-align: end;
       justify-self: end;
 }
-
 .user p {
   display: flex;
   align-items: center;
@@ -358,7 +341,6 @@ body {
   border-radius: 50%;
   margin-right: 10px;
 }
-
 .primary-list {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -382,18 +364,14 @@ body {
   display: flex;
   overflow: auto;
 }
-
 .primaryPlaylist-list .primaryPlaylistItem {
   margin-right: 10px;
 }
-
 .primaryPlaylistItem {
   /*border: 1px solid blue;*/
 }
-
 .primaryPlaylistItem-image {
 }
-
 .primaryPlaylistItem img {
   width: 250px;
   height: 180px;
@@ -406,62 +384,14 @@ body {
   font-size: 14px;
   font-weight: normal;
 }
-
-
-.featuring {
-  background: -webkit-gradient(linear, left top, right top, from(#ff0000), to(#ff458b));
-  background: linear-gradient(to right, #ff0000, #ff458b);
-  display: flex;
-  height: 100%;
-  align-items: center;
-  padding-left: 100px;
-  color: white;
-  /* ubicando los media queries para que sean mas legibles */
-}
-
-
-@media screen and (max-width: 767px) {
-
-  .featuring {
-  
-    position: fixed;
-  
-    bottom: 0;
-  
-    left: 0;
-  
-    right: 0;
-  
-    height: 150px;
-  }
-}
-
-.featuring-image {
-  margin-right: 20px;
-}
-
-.featuring-title {
-  margin: 10px;
-}
-.featuring-album {
-  font-size: 1.3em;
-  margin: 10px;
-}
-
- /* @media screen and (max-width: 768px){
+/* @media screen and (max-width: 768px){
   body{
    
     border: 10px solid blue;
   }
 }  */
-
-
-
 /* @custom-media --small screen and (max-width: 768px); */
-
-
 /* gracias al nesting puedo ubicar los media queries en un lugar mas legible */
-
 /* @media (--small){
   body{
     border: 10px solid blue;
@@ -483,13 +413,11 @@ body {
     height: 150px;
   }
 }  */
-
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .logo {
   background-image: url(../../images/platzi-video-2x.png);
 }
 }
-
 @media (-webkit-min-device-pixel-ratio: 3.125), (min-resolution: 300dpi) {
 .logo {
   background-image: url(../../images/platzi-video-3x.png);
