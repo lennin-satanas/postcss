@@ -161,6 +161,14 @@ body {
   padding: 0 20px;
 }
 
+/*Permite seleccionar cualquier enlace dentro de un selector*/
+.myPlaylist :link:hover,.myPlaylist :visited:hover{
+  color: (peru l(80%) s(80%));
+  -webkit-transform: scale(.9);
+          transform: scale(.9);
+
+}
+
 .myPlaylist-item a {
   color: white;
   text-decoration: none;
@@ -176,6 +184,17 @@ body {
 .myPlaylist-item a:hover {
   text-decoration: underline;
 }
+
+/* Nos permite seleccionar las coicidencias dentro de un selectores */
+.myPlaylist-item:first-child, .myPlaylist-item:nth-last-of-type(4), .myPlaylist-item:last-child{
+  background: rgb(255, 153, 153);
+}
+  
+/* Nos permite seleccionar lo que no coincida con las propiedades que se le pasen */
+.myPlaylist-item:not(:first-child):not(:nth-last-of-type(4)):not(:last-child){
+  background: rgb(102, 102, 255);
+}
+ 
 
 /*playlistFriends*/
 

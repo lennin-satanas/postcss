@@ -288,3 +288,25 @@ Selectores personalizados
 }
 
 tener en cuenta el html 
+
+
+
+Pseudo clases
+
+Pseudo selectores: nos permiten seleccionar clases de una mejor manera
+:any-link pseudo-class Nos permite seleccionar cualquier enlace dentro de un selector.
+ejemplo: .myPlaylist :any-link:hover{ transform: scale(1.1)}
+
+:matches pseudo-class Nos permite seleccionar las coicidencias dentro de un selectores
+ejemplo: .myPlaylist-item:matches(:last-child, :nth-of-type(3), :firs-child) 
+{background: color(red l(70%))}
+
+:not pseudo-class Nos permite seleccionar lo que no coincida con las propiedades que se le pasen
+ejemplo: .myPlaylist-item:not(:last-child, :nth-of-type(3), :first-child) {background: color(blue l(70%))}
+
+https://cssnext.github.io/features/#any-link-pseudo-class
+
+indentado(nesting)
+
+
+
